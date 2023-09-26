@@ -1,0 +1,123 @@
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 91;
+}
+
+.top-header {
+    background-color: rgb(221, 216, 216);
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+}
+
+
+.left-section-top {
+    padding: 10px 0px;
+    font-size: 12px;
+    margin-left: 170px;
+    margin-right: 20px;
+    color: #5e6461;
+    text-transform: uppercase;
+    flex-grow: 1;
+
+}
+
+.right-section-top {
+    display: flex;
+    column-gap: 10px;
+    flex-wrap: nowrap;
+    margin-right: 20px;
+    height: 50px;
+    align-items: center;
+}
+
+.facebook-logo {
+    width: 12px;
+    margin-top: 2px;
+    margin-right: 3px;
+    transition: 0.05s;
+}
+
+.facebook-logo:hover {
+    width: 16px;
+    
+}
+
+.instagram-logo {
+    width: 23px; 
+    transition: 0.05s; 
+}
+
+.instagram-logo:hover {
+    width: 30px;   
+}
+
+.nav {
+    background-color: red;
+    height: 75px;
+    display: flex;
+
+}
+
+.right-section-nav {
+    text-transform: uppercase;
+    color: white;
+    display: flex;
+    margin-left: 130px;
+    align-items: center;
+    justify-content: space-evenly;
+    column-gap: 50px;
+    flex-wrap: wrap;
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+li a {
+    font-size: 18px;
+    position: relative;
+    text-decoration: none;
+    color: rgb(221, 219, 219);
+    letter-spacing: 0.5px;
+}
+
+li a:after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -4px;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: white;
+}
+
+li a:hover:after {
+    width: 100%;
+    
+}
+
+.slad-logo {
+    width: 150px;
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    z-index: 100;
+}
