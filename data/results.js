@@ -7,7 +7,8 @@ const results = [{
     team2: 'Adversário',
     competion: 'Camp. Distrital',
     score1: '<b>4</b>',
-    score2: 2
+    score2: 2,
+    id: 'grid1'
 }, {
 date: 'Dom 21 Set, 10H',
 logo1: 'data/images/slad-logo-removebg.png',
@@ -17,7 +18,8 @@ team1: 'SLAD',
 team2: '<b>GDM/AAUBI</b>',
 competion: 'Taça Distrital',
 score1: 4,
-score2: '<b>5</b>'
+score2: '<b>5</b>',
+id: 'grid2'
 }, {
     date: 'Sáb 27 Set, 11H',
     logo1: 'data/images/slad-logo-removebg.png',
@@ -27,7 +29,8 @@ score2: '<b>5</b>'
     team2: 'GDM/AAUBI',
     competion: 'Camp. Distrital',
     score1: '-',
-    score2: '-'
+    score2: '-',
+    id: 'grid3'
     }, {
         date: 'Dom 28 Set, 16H',
         logo1: 'data/images/slad-logo-removebg.png',
@@ -37,6 +40,7 @@ score2: '<b>5</b>'
         team2: 'GDM/AAUBI',
         competion: 'Camp. Distrital',
         score1: '-',
-        score2: '-'
+        score2: '-',
+        id: 'grid4'
         }
 ];
