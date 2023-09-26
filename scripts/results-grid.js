@@ -2,7 +2,7 @@ let resultsHTML = ``;
 
 results.forEach((result) => {
     resultsHTML += `
-        <div class="results-grid">
+        <div class="results-grid ${result.id}">
             <div class="date">${result.date}</div>
             <div class="age-group">${result.age}</div>
             <div class="competion">${result.competion}</div>
