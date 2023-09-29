@@ -1,5 +1,5 @@
 const results = [{
-    date: 'Sáb 20 Set, 15:30H',
+    date: 'Sáb 20 Set, <p>15:30H</p>',
     logo1: 'data/images/slad-logo-removebg.png',
     logo2: 'data/images/gdm-aaubi-logo-removebg.png',
     age: 'Infantis',
@@ -10,7 +10,7 @@ const results = [{
     score2: 2,
     id: 'grid1'
 }, {
-date: 'Dom 21 Set, 10H',
+date: 'Dom 21 Set, <p>10H</p>',
 logo1: 'data/images/slad-logo-removebg.png',
 logo2: 'data/images/gdm-aaubi-logo-removebg.png',
 age: 'Iniciados',
@@ -21,7 +21,7 @@ score1: 4,
 score2: '<b>5</b>',
 id: 'grid2'
 }, {
-    date: 'Sáb 27 Set, 11H',
+    date: 'Sáb 27 Set, <p>11H</p>',
     logo1: 'data/images/slad-logo-removebg.png',
     logo2: 'data/images/gdm-aaubi-logo-removebg.png',
     age: 'Juvenis',
@@ -32,7 +32,7 @@ id: 'grid2'
     score2: '-',
     id: 'grid3'
     }, {
-        date: 'Dom 28 Set, 16H',
+        date: 'Dom 28 Set, <p>16H</p>',
         logo1: 'data/images/slad-logo-removebg.png',
         logo2: 'data/images/gdm-aaubi-logo-removebg.png',
         age: 'Júniores',
