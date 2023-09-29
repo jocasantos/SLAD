@@ -1,7 +1,20 @@
+const navElem = document.getElementById('nav');
+const resultsGridElem = document.getElementById('results-main');
+const closeMenusElem = document.getElementsByClassName('close-menu');
+
 function openMenu () {
-    const navElem = document.getElementById('nav');
     navElem.classList.toggle('responsive');
 
-    const bodyElem = document.getElementById('results-main');
-    bodyElem.classList.toggle('responsive');
-}
+    resultsGridElem.classList.toggle('responsive');
+};
+
+document.querySelector('.icon')
+    .addEventListener('click', () => {
+        openMenu();
+    });
+
+closeMenusElem[0].addEventListener('click', () => {
+    resultsGridElem.classList.remove('responsive');
+    navElem.classList.remove('responsive');
+});
+
