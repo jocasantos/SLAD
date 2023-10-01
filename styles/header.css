@@ -64,7 +64,7 @@ header {
 }
 
 .nav {
-    background-color: red;
+    background-color: rgba(164,37,38,255);
     height: 75px;
     display: flex;
 
