@@ -50,7 +50,7 @@ header {
 }
 
 .facebook-logo:hover {
-    width: 16px;
+    transform:scale(1.5);
     
 }
 
@@ -60,7 +60,7 @@ header {
 }
 
 .instagram-logo:hover {
-    width: 30px;   
+    transform:scale(1.5);   
 }
 
 .nav {
@@ -82,7 +82,7 @@ header {
     list-style-type: none;
 }
 
-li a {
+.right-section-nav li a {
     font-size: calc(11px + 0.390625vw);
     position: relative;
     text-decoration: none;
@@ -90,7 +90,7 @@ li a {
     letter-spacing: 0.5px;
 }
 
-li a:after {
+.right-section-nav li a:after {
     content: "";
     position: absolute;
     background-color: white;
@@ -101,21 +101,21 @@ li a:after {
     transition: 0.3s;
 }
 
-a:hover {
+.right-section-nav a:hover {
     color: white;
 }
 
-li a:hover:after {
+.right-section-nav li a:hover:after {
     width: 100%;
     
 }
 
-.icon {
+.hamb-icon {
     font-size: 35px;
     display: none;
 }
 
-.icon:hover:after {
+.hamb-icon:hover:after {
     display: none;
 }
 
@@ -140,11 +140,12 @@ li a:hover:after {
     }
     
     .right-section-nav li a {display: none;}
-    .right-section-nav a.icon {
+    .right-section-nav a.hamb-icon {
         display: flex;  
         justify-content: end;
         padding-top: 18px;
         margin-right: 20px;
+        font-size: 35px;
     }
 
     .right-section-nav {
@@ -163,7 +164,7 @@ li a:hover:after {
         transition-timing-function: ease-out;
     }
 
-    .right-section-nav.responsive a.icon {
+    .right-section-nav.responsive a.hamb-icon {
       position: absolute;
       right: 0;
       top: 0;
@@ -176,7 +177,7 @@ li a:hover:after {
         margin-bottom: 20px;
     }
 
-    li a:hover:after {
+    .right-section-nav li a:hover:after {
         width: 0;   
     }
 

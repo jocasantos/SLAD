@@ -1,4 +1,4 @@
-const results = [{
+export const results = [{
     date: 'Sáb 20 Set, <p>15:30H</p>',
     logo1: 'data/images/slad-logo-removebg.png',
     logo2: 'data/images/gdm-aaubi-logo-removebg.png',
