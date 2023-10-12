@@ -17,9 +17,6 @@
 }
 
 .carousel__track {
-/*     dont need this cause header style put * all element without padding and margin
-    padding: 0;
-    margin: 0; */
     list-style: none;
     height: 100%;
     transition: transform 250ms ease-in;
@@ -43,18 +40,19 @@
     background: transparent;
     border: 0;
     cursor: pointer;
+    z-index: 90;
 }
 
 .carousel__button--left {
-    left: -40px;
+    left: 40px;
 }
 
 .carousel__button--right {
-    right: -40px;
+    right: 40px;
 }
 
 .carousel__button img {
-    width: 20px;
+    width: 30px;
 }
 
 .carousel__nav {
