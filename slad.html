@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLAD</title>
+    <link rel="stylesheet" href="styles\slad.css">
+    <link rel="stylesheet" href="styles\header.css">
+    <link rel="stylesheet" href="styles\results-grid.css">
+    <link rel="stylesheet" href="styles\carousel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <header class="header">
+        <div class="top-header">
+            <div class="left-section-top">
+                <span>site oficial do sport lisboa àguias do dominguiso</span>
+            </div>
+            <div class="right-section-top">
+                <div>
+                    <a href="https://www.facebook.com/sladominguizo" target="_blank">
+                        <img class="facebook-logo" src="data/images/facebook-logo.png">
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/s.l.a.dominguizo" target="_blank">
+                        <img class="instagram-logo" src="data/images/instagram-logo.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="nav">
+            <div class="left-section-nav">
+                <a href="#">
+                    <img class="slad-logo" src="data/images/slad-logo-removebg.png"> 
+            </div>
+        
+            <ul class="right-section-nav no-select" id="nav">
+                <li><a href="#">home</a></li>
+                <li><a href="#">equipas</a></li>
+                <li><a target="_blank" href="https://resultados.fpf.pt/Competition/GetCompetitionsByAssociation?associationId=221&seasonId=103#:~:text=Competi%C3%A7%C3%B5es%20de%20Futsal">resultados</a></li>
+                <li><a href="#">clube</a></li>
+                <li><a href="javascript:void(0);" class="hamb-icon">
+                    <i class="fa fa-bars"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="carousel container">
+            
+            <button class="carousel__button carousel__button--left is-hidden">
+                <img src="data/images/left.svg" alt="">
+            </button>
+
+            <div class="carousel__track-container">
+                <div class="carousel__tittle"></div>
+               <ul class="carousel__track">
+                <li class="carousel__slide current-slide">
+                    <a href="#"><img class="carousel__image" src="data/images/gala-trofeus.jpg" alt=""></a>
+                </li>
+                <li class="carousel__slide">
+                    <a href="#"><img class="carousel__image" src="data/images/juniores-plantel.jpg" alt=""></a>
+                </li>
+                <li class="carousel__slide">
+                    <a href="#"><img class="carousel__image" src="data/images/juvenis-plantel.jpg" alt=""></a>
+                </li> 
+               </ul> 
+            </div>
+
+            <button class="carousel__button carousel__button--right">
+                <img src="data/images/right.svg" alt="">
+            </button>
+
+            <div class="carousel__nav">
+                <button class="carousel__indicator current-slide"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+            </div>
+        </div>
+
+        <div class="results-main container js-results-grid close-menu" 
+            id="results-main">
+        </div>
+        <footer class="bottom-img container">
+            <a href="#">
+                <img id="slad-tela-23-24-orig" src="data/images/slad-tela-23-24-upsize.png"> 
+            </a>
+            <div class="footer">
+                <a href="#">   
+                    <img id="img-footer" src="data/images/slad-certificacao-logo-orig.jpg">
+                </a>    
+            </div>
+        </footer>    
+
+    </main>
+    <script src="scripts/slad.js" type="module"></script>
+    <script src="scripts/carousel.js" type="module"></script>
+</body>
+</html>

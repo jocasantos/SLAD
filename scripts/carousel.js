@@ -1,17 +1,39 @@
+import { tittleText } from "../data/tittle-text.js";
+
 const track = document.querySelector('.carousel__track');
 const slides = Array.from(track.children);
 const nextButton = document.querySelector('.carousel__button--right');
 const previousButton = document.querySelector('.carousel__button--left');
 const dotsNav = document.querySelector('.carousel__nav');
 const dots = Array.from(dotsNav.children);
+const tittle = document.querySelector('.carousel__tittle');
 
-const slideWidth = slides[0].getBoundingClientRect().width;
+// DISPLAY TITTLE FIRST SLIDE
+tittle.innerHTML = `${tittleText[0]}`;
 
 // ARRANGE THE SLIDES NEXT TO ONE ANOTHER
 function setSlidePosition (slide, index) {
+    const slideWidth = slides[0].getBoundingClientRect().width;
     slide.style.left = slideWidth * index + 'px';
 };
-slides.forEach(setSlidePosition);
+
+function setSlidesPositions () {
+    slides.forEach(setSlidePosition); 
+    const currentSlide = track.querySelector('.current-slide');
+    const targetSlide = slides[0];
+    const currentDot = dotsNav.querySelector('.current-slide');
+    const targetDot = dots[0];
+    moveToSlide(track, currentSlide, targetSlide);
+    updateDots(currentDot, targetDot);
+    hideShowArrows (slides, previousButton, nextButton, 0)
+    updateTittle(track)
+};
+
+setSlidesPositions();
+
+// ARRANGE SLIDES WHEN RESIZE
+window.addEventListener('resize', setSlidesPositions);
+
 
 function moveToSlide (track, currentSlide, targetSlide) {
     track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
@@ -50,6 +72,7 @@ previousButton.addEventListener('click', e => {
     moveToSlide(track, currentSlide, previousSlide);
     updateDots(currentDot, previousDot);
     hideShowArrows(slides, previousButton, nextButton, previousIndex);
+    updateTittle(track);
 });
 
 // WHEN I CLICK RIGHT, MOVE SLIDES TO THE RIGHT
@@ -63,6 +86,7 @@ nextButton.addEventListener('click', e => {
     moveToSlide (track, currentSlide, nextSlide);
     updateDots(currentDot, nextDot);
     hideShowArrows(slides, previousButton, nextButton, nextIndex);
+    updateTittle(track);
 });
 
 // WHEN I CLICK THE NAV INDICATORS, MOVE TO THAT SLIDE
@@ -80,4 +104,32 @@ dotsNav.addEventListener('click', e => {
     moveToSlide(track, currentSlide, targetSlide);
     updateDots(currentDot, targetDot);
     hideShowArrows(slides, previousButton, nextButton, targetIndex);
+    updateTittle(track);
 });
+
+function updateTittle (track) {
+    const currentSlide = track.querySelector('.current-slide');
+
+    slides.forEach((slide, index) => {
+        if (slide === currentSlide) {
+            tittle.innerHTML = tittleText[index]; 
+        };
+    });
+};
+
+
+//made carousel draggable
+let isDragStart = false;
+
+function dragStart () {
+    isDragStart = true;
+};
+
+function dragging (e) {
+    if (!isDragStart) return;
+    e.preventDefault();
+    track.scrollLeft = e.pageX;
+};
+
+track.addEventListener('mousedown', dragStart)
+track.addEventListener('mousemove', dragging);
