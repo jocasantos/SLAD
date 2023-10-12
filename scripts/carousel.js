@@ -135,7 +135,9 @@ function dragStart (e) {
 
 function dragging (e) {
     if (!isDragStart) return;
-    e.preventDefault();
+    if (window.innerWidth >= 1024) {
+        e.preventDefault();
+    };
     positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
     return positionDiff;
 };
@@ -155,4 +157,3 @@ track.addEventListener('mousemove', dragging);
 track.addEventListener('touchmove', dragging);
 track.addEventListener('mouseup', dragStop);
 track.addEventListener('touchend', dragStop);
-
