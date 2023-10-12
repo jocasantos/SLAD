@@ -135,7 +135,7 @@ function dragStart (e) {
 
 function dragging (e) {
     if (!isDragStart) return;
-    if (window.innerWidth >= 1024) {
+    if (window.innerWidth > 768) {
         e.preventDefault();
     };
     positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
