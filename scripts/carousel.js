@@ -119,7 +119,7 @@ function updateTittle (track) {
 
 
 //made carousel draggable
-let isDragStart = false;
+/* let isDragStart = false;
 
 function dragStart () {
     isDragStart = true;
@@ -132,4 +132,4 @@ function dragging (e) {
 };
 
 track.addEventListener('mousedown', dragStart)
-track.addEventListener('mousemove', dragging);
+track.addEventListener('mousemove', dragging); */
