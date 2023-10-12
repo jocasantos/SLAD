@@ -134,7 +134,7 @@ header {
     }
 }
 
-@media (max-width: 770px) {
+@media (max-width: 700px) {
     .nav {
         display: block;
     }
@@ -188,6 +188,10 @@ header {
 
 @media (max-width: 375px) {
     .right-section-nav.responsive li a{
-        font-size: 30px;
+        font-size: 24px;
+    }
+
+    .right-section-nav.responsive li a.hamb-icon {
+        font-size: 35px;
     }
 }
