@@ -3,7 +3,7 @@ export function generateResultsGrid (results) {
 
     results.forEach((result) => {
         resultsHTML += `
-            <div class="results-grid ${result.id}">
+            <div class="results-grid ${result.id} reveal">
                 <div class="date">${result.date}</div>
                 <div class="age-group">${result.age}</div>
                 <div class="competion">${result.competion}</div>
@@ -19,4 +19,21 @@ export function generateResultsGrid (results) {
 
     document.querySelector('.js-results-grid').
     innerHTML = resultsHTML; 
+};
+
+export function reveal () {
+    const reveals = document.querySelectorAll('.reveal');
+
+    for(let i = 0; i < reveals.length; i++){
+
+        const windowHeight = window.innerHeight;
+        const revealTop = reveals[i].getBoundingClientRect().top;
+        const revealPoint = 150;
+
+        if (revealTop < windowHeight - revealPoint) {
+            reveals[i].classList.add('active');
+        } else {
+            reveals[i].classList.remove('active');
+        }
+    };
 };
